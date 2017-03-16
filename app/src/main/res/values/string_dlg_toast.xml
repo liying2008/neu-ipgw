@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="userName_or_psw_is_null">帐号或者密码为空</string>
+    <string name="userName_exists_already">用户名已存在</string>
+    <string name="user_account_is_null">没有帐号信息</string>
+    <string name="add_account_successfully">添加成功</string>
+    <string name="delete_account_successfully">删除成功</string>
+    <string name="set_successfully">设置成功</string>
+    <string name="OK">确定</string>
+    <string name="account_invalid">帐号无效或没有连接到外网。</string>
+    <string name="online_info_statement">截止到上次连接到外网时的统计数据(仅供参考)：</string>
+    <string name="online_info">在线信息</string>
+    <string name="query_flow">查询本月流量</string>
+    <string name="flow_error">发生异常。</string>
+    <string name="del_accounts">删除帐户</string>
+    <string name="set_current_account_default_ok">已设置当前帐户为默认使用帐户</string>
+    <string name="sure_to_delete_account">确定要删除所有已保存的帐户吗？</string>
+    <string name="yes">确定</string>
+    <string name="no">取消</string>
+    <string name="add_widget">快速连网</string>
+    <string name="widget_connect_ok">连接成功</string>
+    <string name="widget_connect_no">连接失败</string>
+    <string name="no_sdcard">警告：未检测到SD卡，无法保存文件。</string>
+    <string name="get_info_failed">获取信息失败！</string>
+    <string name="network_unavailable">网络不可用，请检查您的网络设置。</string>
+    <string name="querying_school_calendar">正在查询校历……</string>
+    <string name="loading_school_calendar">正在加载校历……</string>
+
+    <string name="share_description">%s - 校园网网关快速登录，更方便，更实用！下载地址：http://duduhuo.cc/ </string>
+    <string name="share_to">分享到</string>
+    <string name="about_author">关于作者</string>
+    <string name="request_error">请求失败</string>
+
+    <!--网址导航-->
+    <string name="neu_common_web">东北大学常用网址</string>
+    <string-array name="website_navigator">
+        <item>东北大学主页</item>
+        <item>校历</item>
+        <item>Blackboard</item>
+        <item>教务处网站</item>
+        <item>图书馆</item>
+        <item>校园卡服务</item>
+        <item>学生邮件</item>
+        <item>先锋网</item>
+        <item>上网费用查询</item>
+        <item>东北大学IPv6视频直播</item>
+    </string-array>
+
+    <string name="set_current_account_default">设置当前帐户(%s)为默认使用帐户？</string>
+    <string name="save_and_set_default">保存该帐户(%s)，并设为默认使用帐户？</string>
+    <string name="account_has_been_deleted">帐号（%s）已被删除</string>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#f2f2f2"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="添加备注"
+            android:textStyle="bold"
+            android:textColor="#5c5c5c"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d5d7dc" />
+
+    <EditText
+        android:id="@+id/etMark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="28dp"
+        android:textSize="14dp"
+        android:background="@mipmap/edit_text"
+        android:textColor="#666"
+        android:hint="在此输入备注信息（可不填）"
+        android:textColorHint="#999"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存成功后，可以点击单号输入框右侧的按钮快速选取已保存的单号。"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="6dp"
+        android:textSize="11sp"
+        android:textColor="#888"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="#d5d7dc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/btn_dialog"
+            android:text="取消"
+            android:textSize="14sp"
+            android:textColor="@color/btn_text_color" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/button_cutting_line"/>
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/btn_dialog"
+            android:text="保存"
+            android:textSize="14sp"
+            android:textColor="@color/btn_text_color" />
+    </LinearLayout>
+</LinearLayout>

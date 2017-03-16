@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:scrollbarStyle="outsideOverlay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:orientation="vertical">
+        <!--网关相关-->
+        <include layout="@layout/layout_ext_1" />
+        <!--其他校园服务相关-->
+        <include layout="@layout/layout_ext_2" />
+        <!--彩蛋-->
+        <include layout="@layout/layout_ext_egg" />
+        <!--软件相关-->
+        <include layout="@layout/layout_ext_3" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,318 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!--连接状态-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@xml/ext_list_left_top_normal"
+                android:gravity="center"
+                android:text="连接状态"
+                android:textColor="?attr/main_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvState"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="80dp"
+                android:background="@xml/ext_list_right_top_normal"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:textColor="?attr/main_color"
+                android:textSize="14sp" />
+        </FrameLayout>
+
+        <!--失败原因-->
+        <FrameLayout
+            android:id="@+id/flDelAccounts"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@xml/ext_list_left_middle_normal"
+                android:gravity="center"
+                android:text="失败原因"
+                android:textColor="?attr/main_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvReason"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="80dp"
+                android:background="@xml/ext_list_right_middle_normal"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:textColor="?attr/main_color"
+                android:textSize="14sp" />
+        </FrameLayout>
+        <!--帐户余额-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@xml/ext_list_left_middle_normal"
+                android:gravity="center"
+                android:text="帐户余额"
+                android:textColor="?attr/main_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvBalance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="80dp"
+                android:background="@xml/ext_list_right_middle_normal"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:textColor="?attr/main_color"
+                android:textSize="14sp" />
+        </FrameLayout>
+        <!--已用流量-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@xml/ext_list_left_middle_normal"
+                android:gravity="center"
+                android:text="已用流量"
+                android:textColor="?attr/main_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvUsedFlow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="80dp"
+                android:background="@xml/ext_list_right_middle_normal"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:textColor="?attr/main_color"
+                android:textSize="14sp" />
+        </FrameLayout>
+        <!--已用时长-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@xml/ext_list_left_middle_normal"
+                android:gravity="center"
+                android:text="已用时长"
+                android:textColor="?attr/main_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvUsedTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="80dp"
+                android:background="@xml/ext_list_right_middle_normal"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:textColor="?attr/main_color"
+                android:textSize="14sp" />
+        </FrameLayout>
+        <!--当前地址-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@xml/ext_list_left_bottom_normal"
+                android:gravity="center"
+                android:text="当前地址"
+                android:textColor="?attr/main_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvIp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="80dp"
+                android:background="@xml/ext_list_right_bottom_normal"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:textColor="?attr/main_color"
+                android:textSize="14sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="#d5d7dc"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/edittext_top_bg"
+                android:gravity="center_vertical"
+                android:hint="@string/please_input_username"
+                android:inputType="text"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:paddingLeft="25dp"
+                android:textColor="#444"
+                android:textColorHint="#AAA"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnMoreUsers"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/selector_sele_user" />
+
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/edittext_bottom_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/please_input_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingLeft="25dp"
+            android:textColor="#444"
+            android:textColorHint="#AAA"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDisconnectAll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="?attr/btn_main"
+                android:text="@string/disconnect_all"
+                android:textColor="@color/btn_text_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/btn_main"
+                android:text="@string/disconnect_to_web"
+                android:textColor="@color/btn_text_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/btnConnectPC"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="?attr/btn_main"
+                android:text="@string/connect_to_web_pc"
+                android:textColor="@color/btn_text_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnConnect"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/btn_main"
+                android:text="@string/connect_to_web_mobile"
+                android:textColor="@color/btn_text_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/set_default_account_tip"
+            android:textColor="#888"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

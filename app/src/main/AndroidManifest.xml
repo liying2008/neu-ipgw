@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.liying.ipgw">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <application
+        android:name=".application.AccountApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+
+        <!-- 主界面 -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <!-- 添加帐号界面 -->
+        <activity
+            android:name=".activity.AccountActivity"
+            android:windowSoftInputMode="adjustPan|stateVisible"/>
+        <!-- 启动界面 -->
+        <activity
+            android:name=".activity.SplashActivity"
+            android:theme="@style/FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- 初始化帐号 -->
+        <activity
+            android:name=".activity.InitAccountActivity"
+            android:windowSoftInputMode="adjustPan|stateVisible"/>
+        <!-- 校历界面 -->
+        <activity
+            android:name=".activity.CalendarActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 最新网络黑板报界面 -->
+        <activity android:name=".activity.RecentPostsActivity"/>
+        <!-- 应用通知界面 -->
+        <activity android:name=".activity.AppFAQActivity"/>
+        <!-- 快递查询界面 -->
+        <activity
+            android:name=".activity.ExpressActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateVisible"/>
+        <!-- 全部快递列表界面 -->
+        <activity android:name=".activity.ShipperListActivity"/>
+        <!-- 关于界面 -->
+        <activity android:name=".activity.AboutActivity"/>
+        <!-- 色彩主题界面 -->
+        <activity android:name=".activity.ColorThemeActivity"/>
+        <!-- 应用推荐界面 -->
+        <activity android:name=".activity.RecommendActivity"/>
+        <!-- 应用说明界面 -->
+        <activity android:name=".activity.AppDeclareActivity"/>
+        <!-- 彩蛋收纳盒界面 -->
+        <activity android:name=".activity.EggActivity"/>
+        <!--彩蛋大图界面-->
+        <activity android:name=".activity.EggPicActivity" />
+        <!-- HDTV节目列表界面 -->
+        <activity
+            android:name=".activity.NeuHdtvListActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"/>
+        <!-- 节目回看界面 -->
+        <activity
+            android:name=".activity.HdtvReviewActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"/>
+        <!-- 流媒体播放界面 -->
+        <activity
+            android:name=".activity.M3U8Player2"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreen"/>
+        <!-- AppWidget组件 -->
+        <receiver android:name=".widget.IpgwWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <!-- 配置AppWidget所需的数据 -->
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/ipgw_widget"/>
+        </receiver>
+
+        <service android:name=".widget.IpgwService"/>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="你的UMENG_APPKEY"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}"/>
+
+    </application>
+
+</manifest>

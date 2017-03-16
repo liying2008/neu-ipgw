@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.liying.ipgw.activity.CalendarActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@mipmap/titlebar_light"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_btn_titlebar_white"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="扩展"
+            android:textColor="#555"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="校历"
+            android:textColor="#444"
+            android:textSize="17sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d5d7dc" />
+
+    <com.liying.ipgw.view.PinchToZoomDraweeView
+        android:id="@+id/sdvCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        fresco:placeholderImage="@mipmap/loading"/>
+
+</LinearLayout>

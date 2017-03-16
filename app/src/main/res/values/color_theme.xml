@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--遠州鼠-->
+    <color name="yzs_main">#bba796</color>
+    <color name="yzs_sub">#ddd4cb</color>
+    <!--落栗-->
+    <color name="ll_main">#826f5f</color>
+    <color name="ll_sub">#c0b7af</color>
+    <!--蘇芳-->
+    <color name="sf_main">#994c48</color>
+    <color name="sf_sub">#cba4a2</color>
+    <!--石竹-->
+    <color name="sz_main">#e4a4a2</color>
+    <color name="sz_sub">#f3d5d4</color>
+    <!--枯草-->
+    <color name="kc_main">#edc264</color>
+    <color name="kc_sub">#f6e1b2</color>
+    <!--柳煤竹茶-->
+    <color name="lmzc_main">#838b62</color>
+    <color name="lmzc_sub">#c0c4b0</color>
+    <!--錆青磁-->
+    <color name="qqc_main">#8cb9af</color>
+    <color name="qqc_sub">#c5dcd7</color>
+    <!--鳩羽紫-->
+    <color name="jyz_main">#767188</color>
+    <color name="jyz_sub">#bcb9c5</color>
+</resources>

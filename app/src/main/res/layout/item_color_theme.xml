@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:background="@drawable/selector_grid_middle"
+    android:clickable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="170dp"
+        android:layout_height="160dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivThemePreview"
+            android:layout_width="53dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="34dp"
+            android:background="@mipmap/theme_jyz" />
+
+        <ImageView
+            android:id="@+id/ivSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@mipmap/theme_selected" />
+
+        <TextView
+            android:id="@+id/tvThemeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="30dp"
+            android:text="遠州鼠"
+            android:textColor="@android:color/black"
+            android:textSize="13sp" />
+    </FrameLayout>
+</LinearLayout>

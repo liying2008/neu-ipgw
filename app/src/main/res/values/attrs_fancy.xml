@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FancyIndexer">
+        <attr name="widthOffset" format="dimension" />
+        <attr name="minFontSize" format="dimension" />
+        <attr name="maxFontSize" format="dimension" />
+        <attr name="tipFontSize" format="dimension" />
+        <attr name="maxBezierHeight" format="dimension" />
+        <attr name="maxBezierWidth" format="dimension" />
+        <attr name="maxBezierLines" format="dimension" />
+        <attr name="additionalTipOffset" format="dimension" />
+        <attr name="fontColor" format="color" />
+        <attr name="tipFontColor" format="color" />
+    </declare-styleable>
+</resources>

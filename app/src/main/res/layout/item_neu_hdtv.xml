@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llItem"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llProgram"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/flNumber"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="?attr/ext_list_left_middle">
+
+                <TextView
+                    android:id="@+id/tvNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="1"
+                    android:textColor="@color/btn_text_color"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvProgram"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/ext_list_right_middle"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:text="CCTV-1高清"
+                android:textColor="@color/ext_list_text_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flReview"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_right_2_middle"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_tv_review" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/flAddAccount"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_left_top">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_add_account" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_right_top"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:layout_marginLeft="50dp"
+            android:text="添加帐户"
+            android:textColor="@color/ext_list_text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/selector_item_arrow" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flDelAccounts"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_left_middle">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_del_accounts" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="?attr/ext_list_right_middle"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:text="删除已保存的帐号"
+            android:textColor="@color/ext_list_text_color"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flQueryInfo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_left_middle">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_query_info" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="?attr/ext_list_right_middle"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:text="查询在线信息"
+            android:textColor="@color/ext_list_text_color"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flBrowserLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_left_bottom">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_browser_login" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="?attr/ext_list_right_bottom"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:text="从浏览器登录"
+            android:textColor="@color/ext_list_text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/selector_item_arrow" />
+    </FrameLayout>
+
+</merge>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.liying.ipgw.activity.AboutActivity">
+
+    <!--标题栏-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@mipmap/titlebar_light"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_btn_titlebar_white"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="扩展"
+            android:textColor="#555"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="关于"
+            android:textColor="#444"
+            android:textSize="17sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d5d7dc" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Logo等信息展示区-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/about_info_bg">
+
+                <ImageView
+                    android:id="@+id/ivIcon"
+                    android:layout_width="53dp"
+                    android:layout_height="53dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:background="@mipmap/icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="100dp"
+                    android:text="@string/app_name"
+                    android:textColor="#555"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="150dp"
+                    android:text="v4.0"
+                    android:textColor="#666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/about_update_date"
+                    android:textColor="#999"
+                    android:textSize="11sp" />
+            </FrameLayout>
+
+            <!--其他功能区-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="26dp"
+                android:text="更多"
+                android:textColor="#666"
+                android:textSize="13sp" />
+            <!--意见反馈-->
+            <FrameLayout
+                android:id="@+id/flFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="?attr/ext_list_left_top">
+
+                    <ImageView
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_feedback" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:background="?attr/ext_list_right_top"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:text="意见反馈"
+                    android:textColor="@color/ext_list_text_color"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/selector_item_arrow" />
+            </FrameLayout>
+
+            <!--分享该应用-->
+            <FrameLayout
+                android:id="@+id/flShareIPGW"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="?attr/ext_list_left_middle">
+
+                    <ImageView
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_share_ipgw" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:background="?attr/ext_list_right_middle"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:text="分享该应用"
+                    android:textColor="@color/ext_list_text_color"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+            <!--应用说明-->
+            <FrameLayout
+                android:id="@+id/flDeclare"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="?attr/ext_list_left_middle">
+
+                    <ImageView
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_declare" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:background="?attr/ext_list_right_middle"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:text="应用说明"
+                    android:textColor="@color/ext_list_text_color"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/selector_item_arrow" />
+            </FrameLayout>
+
+            <!--应用推荐-->
+            <FrameLayout
+                android:id="@+id/flRecommend"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="?attr/ext_list_left_middle">
+
+                    <ImageView
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_recommend" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:background="?attr/ext_list_right_middle"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:text="应用推荐"
+                    android:textColor="@color/ext_list_text_color"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/selector_item_arrow" />
+            </FrameLayout>
+
+            <!--关于作者-->
+            <FrameLayout
+                android:id="@+id/flAboutAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="?attr/ext_list_left_bottom">
+
+                    <ImageView
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_about_author" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:background="?attr/ext_list_right_bottom"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:text="关于作者"
+                    android:textColor="@color/ext_list_text_color"
+                    android:textSize="14sp" />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

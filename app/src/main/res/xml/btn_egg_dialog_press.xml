@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!--彩蛋对话框按钮按下状态-->
+    <solid android:color="#FFFFE5C1"/>
+</shape>
