@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="colorTheme">
+        <attr name="main_color" format="color" />
+        <attr name="sub_color" format="color" />
+        <attr name="ext_list_left_top" format="reference"/>
+        <attr name="ext_list_right_top" format="reference"/>
+        <attr name="ext_list_left_middle" format="reference"/>
+        <attr name="ext_list_right_middle" format="reference"/>
+        <attr name="ext_list_left_bottom" format="reference"/>
+        <attr name="ext_list_right_bottom" format="reference"/>
+        <attr name="ext_list_right_2_top" format="reference"/>
+        <attr name="ext_list_right_2_middle" format="reference"/>
+        <attr name="ext_list_right_2_bottom" format="reference"/>
+        <attr name="ext_list_left_egg" format="reference"/>
+        <attr name="ext_list_right_egg" format="reference"/>
+        <attr name="btn_long" format="reference"/>
+        <attr name="btn_dialog" format="reference"/>
+        <attr name="btn_main" format="reference"/>
+    </declare-styleable>
+</resources>

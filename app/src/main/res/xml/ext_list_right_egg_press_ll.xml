@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!--彩蛋条目-右-按下状态-->
+    <solid android:color="@color/ll_main" />
+    <corners android:bottomRightRadius="8dp"
+        android:topRightRadius="8dp"/>
+    <stroke
+        android:width="0.5dp"
+        android:color="@android:color/transparent" />
+</shape>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_egg_pic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical"
+    tools:context="com.liying.ipgw.activity.EggPicActivity">
+    <!--标题栏-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@mipmap/titlebar_light"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_btn_titlebar_white"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="彩蛋收纳盒"
+            android:textColor="#555"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="彩蛋 ①"
+            android:textColor="#444"
+            android:textSize="17sp"/>
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d5d7dc"/>
+
+    <TextView
+        android:id="@+id/tvEggMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="彩蛋说明"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="?attr/main_color"
+        android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivEggPic"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/egg01_miss"/>
+
+        <ImageView
+            android:id="@+id/ivStamp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/ivEggPic"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="-80dp"
+            android:src="@mipmap/egg_miss"/>
+    </RelativeLayout>
+
+</LinearLayout>

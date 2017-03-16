@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/flIPTV"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_left_top">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_hdtv" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="?attr/ext_list_right_top"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:text="网络电视"
+            android:textColor="@color/ext_list_text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/selector_item_arrow" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flNavigator"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_left_middle">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_site_navigation" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="?attr/ext_list_right_middle"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:text="网址导航"
+            android:textColor="@color/ext_list_text_color"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flRecentPosts"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_left_middle">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_recent_posts" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="?attr/ext_list_right_middle"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:text="最新网络中心黑板报"
+            android:textColor="@color/ext_list_text_color"
+            android:textSize="14sp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/selector_item_arrow" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/flExpress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_left_middle">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_express" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="?attr/ext_list_right_middle"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:text="快递查询"
+            android:textColor="@color/ext_list_text_color"
+            android:textSize="14sp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/selector_item_arrow" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flSchoolCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_left_bottom">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_school_calendar" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="?attr/ext_list_right_bottom"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:text="查看校历"
+            android:textColor="@color/ext_list_text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/selector_item_arrow" />
+    </FrameLayout>
+
+</merge>

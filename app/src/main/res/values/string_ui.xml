@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">东大IPGW</string>
+    <string name="copyright">Copyright 2015&#8211;%s LiYing All Rights Reserved</string>
+    <string name="about_update_date">— 更新日期：2017-3-16 —</string>
+    <string name="set_default_account">设置默认帐户</string>
+    <string name="xdplayer_lite">XDPlayer简版</string>
+    <string name="please_input_username">请输入校园网帐号</string>
+    <string name="please_input_password">请输入密码</string>
+    <string name="setting_ok">完成设置</string>
+    <string name="connect_to_web_mobile">连接网络(移动端)</string>
+    <string name="connect_to_web_pc">连接网络(PC端)</string>
+    <string name="disconnect_to_web">注销连接</string>
+    <string name="disconnect_all">断开全部连接</string>
+    <string name="add_account">添加帐户</string>
+    <string name="first_run_set_default_account">这是你第一次使用“东大IPGW”，请填写你的校园网帐号和密码，此后，东大IPGW将默认使用该帐户登录校园网网关，并且你可以随时修改它。</string>
+    <string name="add">添加</string>
+    <string name="add_and_default">添加并设为默认帐户</string>
+    <string name="account_ready">完成设置</string>
+
+    <string name="del_user">删除用户</string>
+    <!--提示信息字符串-->
+    <string name="msg_state_y">网络已连接</string>
+    <string name="msg_state_n">失败</string>
+    <string name="msg_state_unknown">未知</string>
+    <string name="msg_state_dis">网络已断开</string>
+    <string name="msg_state_logout">注销成功</string>
+    <string name="msg_state_dis_already">未曾连接到网络</string>
+    <string name="requesting">正在发送请求……</string>
+    <string name="msg_reason_1">帐号或密码为空</string>
+    <string name="msg_reason_2">验证失败</string>
+    <string name="msg_reason_3">无法登录</string>
+    <string name="msg_reason_4">密码错误</string>
+    <string name="msg_reason_5">未接入校园网</string>
+    <string name="msg_reason_6">Internal Server Error</string>
+    <string name="msg_reason_7">无法连接到网关</string>
+    <string name="msg_reason_8">已经在线了</string>
+    <string name="msg_reason_10">用户不存在</string>
+    <string name="msg_reason_11">帐户已欠费</string>
+    <string name="msg_yiyongll_null">ERROR</string>
+    <string name="msg_yiyongsc_null">ERROR</string>
+    <string name="msg_yue_null">ERROR</string>
+    <string name="msg_address_null">ERROR</string>
+
+    <string name="recommend_name_xdp">XDPlayer</string>
+    <string name="recommend_name_sec">SEC密码本</string>
+    <string name="recommend_name_circle">CircleTODO</string>
+
+    <string name="recommend_desc_xdp">观看IPv6电视直播</string>
+    <string name="recommend_desc_sec">安全可靠的密码存储工具</string>
+    <string name="recommend_desc_circle">用色彩标记日程</string>
+
+    <string name="declare_title">一些说明</string>
+    <string name="explain">主要功能：\n该应用用于快速登录东北大学校园网网关，避免了通过浏览器登录的繁琐操作。\n\n使用说明：\n用户点击[连接网络(移动端)]按钮即可连接到外网，点击[连接网络(PC端)]按钮可模拟PC端连网，点击[注销连接]按钮即可断开本设备与外网的连接，点击[断开全部连接]按钮可断开所有设备与外网的连接。\n\n设置默认帐户的两种方式：\n1.在“网关”页面长按用户名输入框可将当前帐户设置为默认帐户。\n2.在帐户列表选择框中长按某一条目可将对应的帐户设置为默认帐户。\n\n其他说明：\n1.在“网关”页面填入的用户名和密码仅当次生效，在未设置为默认帐户的情况下不会被保存。\n2.如果想拥有包含更多功能的IPv6电视直播应用，请下载XDPlayer（http://fir.im/xdp）。\n3.关注作者微博可以获取东大IPGW的最新消息。
+    </string>
+    <string name="declare">声明：\n东大IPGW为个人开发的第三方校园应用，有关校园网的问题请咨询东北大学网络中心。\n有关该应用的问题请通过邮件或者微博与作者联系。</string>
+    <string name="set_default_account_ways">设置默认帐户的两种方式：\n1.在“网关”页面长按用户名输入框可将当前帐户设置为默认帐户。\n2.在帐户列表选择框中长按某一条目可将对应的帐户设置为默认帐户。\n\n你可以在“关于—应用说明”界面再次查看到此信息。</string>
+    <string name="set_default_account_tip">长按帐户列表某一条目可将对应的帐户设置为默认帐户。</string>
+    <string name="open_source">注：\n项目开源地址：https://github.com/liying2008/neu-ipgw</string>
+
+</resources>

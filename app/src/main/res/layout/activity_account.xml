@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical"
+    tools:context="com.liying.ipgw.activity.AccountActivity">
+
+    <!--标题栏-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@mipmap/titlebar_light"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_btn_titlebar_white"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="扩展"
+            android:textColor="#555"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/add_account"
+            android:textColor="#444"
+            android:textSize="17sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d5d7dc" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/edittext_top_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/please_input_username"
+            android:inputType="text"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:paddingLeft="25dp"
+            android:textColor="#444"
+            android:textColorHint="#AAA"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnDelUsername"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/selector_btn_delete"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/edittext_bottom_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/please_input_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingLeft="25dp"
+            android:textColor="#444"
+            android:textColorHint="#AAA"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnDelPassword"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/selector_btn_delete"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnSaveAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="20dp"
+        android:width="200dp"
+        android:background="?attr/btn_long"
+        android:text="@string/add"
+        android:textColor="@color/btn_text_color"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnSaveAccountAsDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="10dp"
+        android:width="200dp"
+        android:background="?attr/btn_long"
+        android:text="@string/add_and_default"
+        android:textColor="@color/btn_text_color"
+        android:textSize="14sp" />
+</LinearLayout>

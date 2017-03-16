@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/flColorTheme"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_left_top">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_color_theme" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="?attr/ext_list_right_top"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:text="色彩主题"
+            android:textColor="@color/ext_list_text_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvThemeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="35dp"
+            android:text="落栗"
+            android:textColor="@color/ext_list_theme_text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/selector_item_arrow" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flAppFAQ"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_left_middle">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_app_faq" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="?attr/ext_list_right_middle"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:text="应用通知"
+            android:textColor="@color/ext_list_text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/selector_item_arrow" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flCheckUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_left_middle">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_check_update" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="?attr/ext_list_right_middle"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:text="检查更新"
+            android:textColor="@color/ext_list_text_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="15dp"
+            android:text="v4.0.1102"
+            android:textColor="@color/ext_list_theme_text_color"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flAbout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?attr/ext_list_left_bottom">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_about_ipgw" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="?attr/ext_list_right_bottom"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:text="关于"
+            android:textColor="@color/ext_list_text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/selector_item_arrow" />
+    </FrameLayout>
+
+</merge>

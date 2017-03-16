@@ -1,0 +1,5 @@
+<resources>
+    <string name="neu_hdtv">东大视频直播</string>
+    <string name="video_layout_loading">正在缓冲&#8230;</string>
+    <string name="toast_key_backplay">再按一次，退出播放</string>
+</resources>

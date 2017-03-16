@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!--扩展功能列表-左下角-按下状态-->
+    <solid android:color="@color/kc_main" />
+    <corners android:bottomLeftRadius="8dp" />
+    <stroke
+        android:width="0.5dp"
+        android:color="@android:color/transparent" />
+</shape>

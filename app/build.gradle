@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.liying.ipgw"
+        minSdkVersion 11
+        targetSdkVersion 23
+        versionCode 26
+        versionName "4.3.2"
+        vectorDrawables.useSupportLibrary = true    // 增加对Vector兼容性的支持
+//        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "fir"]
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            // 混淆
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // zipAlign优化
+            zipAlignEnabled true
+            // 移除无用的Resource文件
+            shrinkResources true
+
+            // 指定输出的文件名
+            applicationVariants.all {
+                variant ->
+                    variant.outputs.each {
+                        output ->
+                            def outFile = output.outputFile
+                            if (outFile != null && outFile.name.endsWith(".apk")) {
+                                def fileName = "ipgw_4.3.2_${variant.productFlavors[0].name.replaceAll("_", "")}.apk"
+                                output.outputFile = new File(outFile.parent, fileName)
+                            }
+                    }
+            }
+        }
+    }
+
+    productFlavors {
+        fir {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "fir"]
+        }
+        _360 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "360"]
+        }
+        baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+        }
+        _91 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "91"]
+        }
+        hiapk {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "hiapk"]
+        }
+        tqq {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "tqq"]
+        }
+        wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+        }
+        xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
+    compile 'com.shizhefei:ViewPagerIndicator:1.1.5'
+    compile 'cc.duduhuo.applicationtoast:applicationtoast:0.3'
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    compile 'com.yanzhenjie.nohttp:nohttp:1.1.1'
+    compile 'org.sufficientlysecure:html-textview:3.3'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/pinyin4j-2.5.0.jar')
+}

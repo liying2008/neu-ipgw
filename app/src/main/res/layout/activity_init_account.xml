@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_init_account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main_bg"
+    tools:context="com.liying.ipgw.activity.InitAccountActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--标题栏-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@mipmap/titlebar_light"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvSkip"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="跳过"
+                android:gravity="center"
+                android:clickable="true"
+                android:textSize="12sp"
+                android:textColor="#555"
+                android:layout_gravity="center_vertical|right"
+                android:background="@drawable/selector_btn_titlebar_skip_white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/set_default_account"
+                android:textColor="#444"
+                android:textSize="17sp" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#d5d7dc"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/first_run_set_default_account"
+                    android:textColor="#555"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textSize="13sp"/>
+                <!--设置默认用户名-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <EditText
+                        android:id="@+id/etUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/edittext_top_bg"
+                        android:gravity="center_vertical"
+                        android:hint="@string/please_input_username"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:maxLength="15"
+                        android:paddingLeft="25dp"
+                        android:textColor="#444"
+                        android:textColorHint="#AAA"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btnDelUsername"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/selector_btn_delete" />
+
+                </FrameLayout>
+
+                <!--设置默认密码-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/edittext_bottom_bg"
+                        android:gravity="center_vertical"
+                        android:hint="@string/please_input_password"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingLeft="25dp"
+                        android:textColor="#444"
+                        android:textColorHint="#AAA"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btnDelPassword"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="-2dp"
+                        android:background="@drawable/selector_btn_delete" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/set_default_account_ways"
+                    android:textColor="#555"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnSaveAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="20dp"
+                    android:width="200dp"
+                    android:background="?attr/btn_long"
+                    android:text="@string/setting_ok"
+                    android:textSize="14sp"
+                    android:textColor="@color/btn_text_color" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
