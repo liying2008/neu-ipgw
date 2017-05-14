@@ -10,8 +10,11 @@ package com.liying.ipgw.model;
  * =======================================================
  */
 public class Program {
+    /** 节目序号 */
     private int id;
+    /** 节目名称 */
     private String name;
+    /** 频道 */
     private String p;
 
     public Program() {

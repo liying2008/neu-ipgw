@@ -48,5 +48,6 @@
         android:gravity="center_horizontal"
         android:paddingBottom="15dp"
         android:textColor="#fff"
+        android:text="@string/copyright"
         android:textSize="13sp" />
 </RelativeLayout>

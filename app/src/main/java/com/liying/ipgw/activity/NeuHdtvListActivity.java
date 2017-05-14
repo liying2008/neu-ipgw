@@ -43,15 +43,11 @@ public class NeuHdtvListActivity extends BaseActivity implements SwipeRefreshLay
     private static final int REQUEST_WHAT = 0x0001;
     /** 东北大学IPv6视频直播测试站（人气排序） */
     private static final String NEU_HDTV_URL_ONLINE = "http://hdtv.neu6.edu.cn/?online";
-    /**
-     * 节目列表
-     */
+    /** 节目列表 */
     private List<Program> mProgramsList;
     private NeuHdtvListAdapter adapter;
     // 创建请求队列, 默认并发3个请求, 传入数字改变并发数量: NoHttp.newRequestQueue(1);
-    /**
-     * 请求队列
-     */
+    /** 请求队列 */
     private RequestQueue requestQueue;
 
 

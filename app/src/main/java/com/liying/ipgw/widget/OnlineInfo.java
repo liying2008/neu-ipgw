@@ -10,29 +10,17 @@ package com.liying.ipgw.widget;
  * =======================================================
  */
 public class OnlineInfo {
-    /**
-     * 连接状态
-     */
+    /** 连接状态 */
     private String state = "";
-    /**
-     * 失败原因
-     */
+    /** 失败原因 */
     private String reason = "";
-    /**
-     * 帐户余额
-     */
+    /** 帐户余额 */
     private String balance = "";
-    /**
-     * 已有流量
-     */
+    /** 已有流量 */
     private String usedFlow = "";
-    /**
-     * 已用时长
-     */
+    /** 已用时长  */
     private String usedTime = "";
-    /**
-     * 当前地址
-     */
+    /** 当前地址 */
     private String ip = "";
 
     public String getState() {

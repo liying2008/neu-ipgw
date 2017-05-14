@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:orientation="vertical">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -18,13 +18,13 @@
             android:text="@string/about_author"
             android:textColor="#5c5c5c"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
     </FrameLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="#d5d7dc" />
+        android:background="#d5d7dc"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -41,25 +41,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:gravity="center_horizontal"
-                android:text="作者姓名"
-                android:textColor="#555"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="center"
-                android:text="李颖" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="center_horizontal"
                 android:text="作者邮箱"
                 android:textColor="#555"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -67,7 +51,7 @@
                 android:layout_marginTop="5dp"
                 android:autoLink="email"
                 android:gravity="center"
-                android:text="liruoer2008@yeah.net" />
+                android:text="liruoer2008@yeah.net"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -76,14 +60,14 @@
                 android:gravity="center_horizontal"
                 android:text="作者微博"
                 android:textColor="#555"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:text="\@独毒火" />
+                android:text="\@独毒火"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -91,7 +75,7 @@
                 android:layout_marginTop="5dp"
                 android:autoLink="web"
                 android:gravity="center"
-                android:text="http://weibo.com/neuliying" />
+                android:text="http://weibo.com/neuliying"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -100,7 +84,7 @@
                 android:gravity="center_horizontal"
                 android:text="GitHub"
                 android:textColor="#555"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -109,7 +93,25 @@
                 android:layout_marginTop="5dp"
                 android:autoLink="web"
                 android:gravity="center"
-                android:text="https://github.com/liying2008" />
+                android:text="https://github.com/liying2008"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="简书"
+                android:textColor="#555"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="5dp"
+                android:autoLink="web"
+                android:gravity="center"
+                android:text="http://www.jianshu.com/u/14ab91761183"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -118,7 +120,7 @@
                 android:gravity="center_horizontal"
                 android:text="个人网站"
                 android:textColor="#555"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -127,14 +129,14 @@
                 android:layout_marginTop="5dp"
                 android:autoLink="web"
                 android:gravity="center"
-                android:text="http://duduhuo.cc/" />
+                android:text="http://duduhuo.cc/"/>
         </LinearLayout>
     </ScrollView>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="#d5d7dc" />
+        android:background="#d5d7dc"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -147,7 +149,7 @@
             android:layout_weight="1"
             android:background="?attr/btn_dialog"
             android:text="确定"
-            android:textSize="14sp"
-            android:textColor="@color/btn_text_color" />
+            android:textColor="@color/btn_text_color"
+            android:textSize="14sp"/>
     </LinearLayout>
 </LinearLayout>

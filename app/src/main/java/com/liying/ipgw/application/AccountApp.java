@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.liying.ipgw.R;
 import com.liying.ipgw.activity.BaseActivity;
 import com.liying.ipgw.callback.EggObtainedCallback;
@@ -56,7 +55,6 @@ public class AccountApp extends Application {
 
     public static AccountInfoServices aServices = null;
     public static ExpressServices eServices = null;
-    public static String versionName;
     /** 色彩主题的名称 */
     public static String colorThemeName;
     /** 上次连接成功的帐户 */
@@ -71,11 +69,11 @@ public class AccountApp extends Application {
     /** 用户帐户改变 */
     public static OnAccountChange accountChangeCallback;
     /** 用户已获取的彩蛋数量 */
-    public static int eggCount;
+    public static int eggCount = -1;
     /** 用户已获取的彩蛋列表 */
-    public static List<Egg> eggList = new ArrayList<>(10);
+    public static List<Egg> eggList = null;
     /** 用户已获取的彩蛋号码 */
-    public static Set<String> eggNums = new HashSet<>(15);
+    public static Set<String> eggNums = null;
     /** 是否显示彩蛋收纳盒 */
     public static boolean isEggsBoxShow = false;
     /** 消息推送的ID */
@@ -100,16 +98,8 @@ public class AccountApp extends Application {
         MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_UM_NORMAL);
         // 初始化ApplicationToast
         AppToast.init(this);
-        // 初始化Fresco类
-        Fresco.initialize(this);
         // 初始化NoHttp
         NoHttp.initialize(this);
-//        NoHttp.initialize(this, new NoHttp.Config()
-//                // 设置全局连接超时时间，单位毫秒
-//                .setConnectTimeout(8 * 1000)
-//                // 设置全局服务器响应超时时间，单位毫秒
-//                .setReadTimeout(3 * 1000)
-//        );
     }
 
     /** 得到本Application实例 */
@@ -153,6 +143,23 @@ public class AccountApp extends Application {
             e.printStackTrace();
         }
         return versionCode;
+    }
+
+    /**
+     * 获取版本名称
+     *
+     * @return 版本名称
+     */
+    public String getVersionName() {
+        String packageName = getPackageName();
+        PackageInfo packageInfo = null;
+        try {
+            packageInfo = getPackageManager().getPackageInfo(packageName, 0);
+            return packageInfo.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     /**

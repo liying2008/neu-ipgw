@@ -123,7 +123,7 @@ public class ExtFragment extends Fragment implements View.OnClickListener, EggOb
             flEggBox.setVisibility(View.GONE);
         }
         // 设置版本名称
-        tvVersion.setText(AccountApp.versionName);
+        tvVersion.setText(AccountApp.getInstance().getVersionName());
     }
 
     @Override
@@ -139,7 +139,7 @@ public class ExtFragment extends Fragment implements View.OnClickListener, EggOb
                 // 删除已保存的帐号
                 AlertDialog.Builder builder = AccountApp.getAlertDialogBuilder(getActivity());
                 View dialogView = LayoutInflater.from(getActivity())
-                        .inflate(R.layout.dialog_del_accounts, null);
+                    .inflate(R.layout.dialog_del_accounts, null);
                 builder.setView(dialogView);
                 final AlertDialog dialog = builder.create();
                 Button btnCancel = (Button) dialogView.findViewById(R.id.btnCancel);
@@ -285,12 +285,12 @@ public class ExtFragment extends Fragment implements View.OnClickListener, EggOb
     private void websiteNavigator() {
         AlertDialog.Builder builder = AccountApp.getAlertDialogBuilder(getActivity());
         View dialogView = LayoutInflater.from(getActivity())
-                .inflate(R.layout.dialog_website_navigator, null);
+            .inflate(R.layout.dialog_website_navigator, null);
         builder.setView(dialogView);
         final AlertDialog dialog = builder.create();
         ListView lvWebsite = (ListView) dialogView.findViewById(R.id.lvWebsite);
         lvWebsite.setAdapter(new ArrayAdapter<>(getActivity(), R.layout.item_simple_list,
-                getResources().getStringArray(R.array.website_navigator)));
+            getResources().getStringArray(R.array.website_navigator)));
 
         lvWebsite.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -356,7 +356,7 @@ public class ExtFragment extends Fragment implements View.OnClickListener, EggOb
                     progressDialog.dismiss();
                     AlertDialog.Builder builder = AccountApp.getAlertDialogBuilder(getActivity());
                     View dialogView = LayoutInflater.from(getActivity())
-                            .inflate(R.layout.dialog_online_info, null);
+                        .inflate(R.layout.dialog_online_info, null);
                     builder.setView(dialogView);
                     final AlertDialog dialog3 = builder.create();
                     TextView tvCurrentAccount = (TextView) dialogView.findViewById(R.id.tvCurrentAccount);
@@ -364,8 +364,8 @@ public class ExtFragment extends Fragment implements View.OnClickListener, EggOb
                     Button btnOK3 = (Button) dialogView.findViewById(R.id.btnOK);
                     tvCurrentAccount.setText("帐户：" + AccountApp.lastSuccess);
                     final String infoText = getActivity().getString(R.string.online_info_statement) +
-                            "\n\n已用流量：" + info[0] + "\n已用时长：" + info[1] +
-                            "\n帐户余额：" + info[2] + "\n当前地址：" + info[3];
+                        "\n\n已用流量：" + info[0] + "\n已用时长：" + info[1] +
+                        "\n帐户余额：" + info[2] + "\n当前地址：" + info[3];
                     tvOnlineInfo.setText(infoText);
                     btnOK3.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -399,7 +399,7 @@ public class ExtFragment extends Fragment implements View.OnClickListener, EggOb
                             progressDialog.dismiss();
                             builder = AccountApp.getAlertDialogBuilder(getActivity());
                             dialogView = LayoutInflater.from(getActivity())
-                                    .inflate(R.layout.dialog_account_invalid, null);
+                                .inflate(R.layout.dialog_account_invalid, null);
                             builder.setView(dialogView);
                             final AlertDialog dialog1 = builder.create();
                             Button btnOK1 = (Button) dialogView.findViewById(R.id.btnOK);
@@ -415,7 +415,7 @@ public class ExtFragment extends Fragment implements View.OnClickListener, EggOb
                             progressDialog.dismiss();
                             builder = AccountApp.getAlertDialogBuilder(getActivity());
                             dialogView = LayoutInflater.from(getActivity())
-                                    .inflate(R.layout.dialog_account_invalid, null);
+                                .inflate(R.layout.dialog_account_invalid, null);
                             builder.setView(dialogView);
                             final AlertDialog dialog2 = builder.create();
                             Button btnOK2 = (Button) dialogView.findViewById(R.id.btnOK);

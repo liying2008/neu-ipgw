@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/black">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black">
 
     <SurfaceView
         android:id="@+id/video_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
+        android:layout_centerVertical="true"/>
 
     <LinearLayout
         android:id="@+id/video_loading"
@@ -20,7 +20,7 @@
 
         <ProgressBar
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/tvBufferUpdatePercent"
@@ -29,7 +29,7 @@
             android:paddingTop="7.0dip"
             android:text="@string/video_layout_loading"
             android:textColor="@android:color/white"
-            android:textSize="18.0sp" />
+            android:textSize="18.0sp"/>
     </LinearLayout>
 
     <FrameLayout
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@mipmap/video_volumn_bg" />
+            android:src="@mipmap/video_volumn_bg"/>
 
         <FrameLayout
             android:layout_width="wrap_content"
@@ -60,7 +60,7 @@
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:background="@mipmap/video_num_bg" />
+                android:background="@mipmap/video_num_bg"/>
 
             <ImageView
                 android:id="@+id/operation_percent"
@@ -68,13 +68,13 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:background="@mipmap/video_num_front"
-                android:scaleType="matrix" />
+                android:scaleType="matrix"/>
         </FrameLayout>
     </FrameLayout>
 
     <include
         layout="@layout/simple_controller"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_alignParentBottom="true" />
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

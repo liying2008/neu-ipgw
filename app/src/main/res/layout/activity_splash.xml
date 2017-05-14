@@ -59,6 +59,7 @@
         android:layout_gravity="bottom"
         android:gravity="bottom|center_horizontal"
         android:paddingBottom="15dp"
+        android:text="@string/copyright"
         android:textColor="#fff"
         android:textSize="13sp" />
 </FrameLayout>

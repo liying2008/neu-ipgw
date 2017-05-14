@@ -12,8 +12,11 @@ import android.support.annotation.NonNull;
  * =======================================================
  */
 public class Egg {
+    /** 彩蛋序号 */
     private int eggNumber;
+    /** 彩蛋图片 */
     private int eggDrawable;
+    /** 彩蛋文本 */
     private String eggMsg;
 
     public Egg() {

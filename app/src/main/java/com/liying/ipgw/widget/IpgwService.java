@@ -23,9 +23,7 @@ import com.liying.ipgw.utils.NetWorkUtils;
 import lxy.liying.ipgw.post.IPGWOperation;
 
 public class IpgwService extends Service {
-    /**
-     * 更新完成后的广播动作
-     */
+    /** 更新完成后的广播动作 */
     public static final String ACTION_IPGW = "com.liying.ipgw.appwidget.ACTION_IPGW";
     public static final int NO_OP = 0x0000;
     public static final int CONNECT = 0x0010;
@@ -36,9 +34,7 @@ public class IpgwService extends Service {
     private String userName = "";
     private String password = "";
 
-    /**
-     * 当前数据，通过静态值保存
-     */
+    /** 当前数据，通过静态值保存 */
     private static OnlineInfo sInfo = new OnlineInfo();
     private RemoteViews views;
 

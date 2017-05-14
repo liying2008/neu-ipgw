@@ -18,7 +18,11 @@ import com.liying.ipgw.application.AccountApp;
 import com.liying.ipgw.callback.PermissionDenyCallback;
 import com.liying.ipgw.utils.ColorThemeUtils;
 import com.liying.ipgw.utils.Constants;
+import com.liying.ipgw.utils.EggUtils;
 import com.umeng.analytics.MobclickAgent;
+
+import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  * =======================================================
@@ -30,18 +34,39 @@ import com.umeng.analytics.MobclickAgent;
  * =======================================================
  */
 public class BaseActivity extends AppCompatActivity implements PermissionDenyCallback {
-    /**
-     * 请求写外部存储的请求码
-     */
+    /** 请求写外部存储的请求码 */
     public static final int WRITE_EXTERNAL_STORAGE_CODE = 0x0000;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         loadTheme();    // 加载主题
         super.onCreate(savedInstanceState);
+        // 检查数据是否存在，不存在则重新读取
+        if (AccountApp.eggNums == null) {
+            AccountApp.eggNums = new HashSet<>(10);
+            AccountApp.eggNums.addAll(AccountApp.getInstance().eggPrefs.getStringSet(Constants.EGG_SET, AccountApp.eggNums));
+        }
+        if (AccountApp.eggCount == -1) {
+            AccountApp.eggCount = AccountApp.eggNums.size();
+        }
+        if (AccountApp.eggList == null) {
+            AccountApp.eggList = new ArrayList<>(10);
+            AccountApp.eggNums = AccountApp.getInstance().eggPrefs.getStringSet(Constants.EGG_SET, AccountApp.eggNums);
+            for (String eggNum : AccountApp.eggNums) {
+                AccountApp.eggList.add(EggUtils.getEggByNum(Integer.parseInt(eggNum)));
+            }
+        }
+        if (AccountApp.pushID == 0) {
+            AccountApp.pushID = AccountApp.getInstance().prefs.getInt(Constants.PUSH_ID, 0);
+        }
+        if ("".equals(AccountApp.defaultUserName)) {
+            AccountApp.defaultUserName = AccountApp.getInstance().prefs.getString(Constants.DEFAULT_ACCOUNT, "null");
+        }
     }
 
     /**
      * 获取点击事件
+     *
      * @param ev
      * @return
      */
@@ -58,18 +83,19 @@ public class BaseActivity extends AppCompatActivity implements PermissionDenyCal
 
     /**
      * 判定是否需要隐藏
+     *
      * @param v
      * @param ev
      * @return
      */
     private boolean isHideInput(View v, MotionEvent ev) {
         if (v != null && (v instanceof EditText)) {
-            int[] l = { 0, 0 };
+            int[] l = {0, 0};
             v.getLocationInWindow(l);
             int left = l[0], top = l[1], bottom = top + v.getHeight(), right = left
-                    + v.getWidth();
+                + v.getWidth();
             if (ev.getX() > left && ev.getX() < right && ev.getY() > top
-                    && ev.getY() < bottom) {
+                && ev.getY() < bottom) {
                 return false;
             } else {
                 return true;
@@ -80,6 +106,7 @@ public class BaseActivity extends AppCompatActivity implements PermissionDenyCal
 
     /**
      * 隐藏软键盘
+     *
      * @param token
      */
     private void HideSoftInput(IBinder token) {
@@ -100,6 +127,7 @@ public class BaseActivity extends AppCompatActivity implements PermissionDenyCal
         super.onResume();
         MobclickAgent.onResume(this);
     }
+
     /**
      * 加载应用色彩主题
      */
@@ -110,6 +138,7 @@ public class BaseActivity extends AppCompatActivity implements PermissionDenyCal
 
     /**
      * 检查是否具有权限
+     *
      * @param permissions 权限
      * @return
      */
@@ -124,7 +153,8 @@ public class BaseActivity extends AppCompatActivity implements PermissionDenyCal
 
     /**
      * 权限请求方法
-     * @param code 请求码
+     *
+     * @param code        请求码
      * @param permissions 请求的权限数组
      */
     public void requestPermissions(int code, String... permissions) {

@@ -10,7 +10,7 @@ package com.liying.ipgw.model;
  * =======================================================
  */
 public class ReviewDate {
-
+    /** 日期 */
     private String name;
 
     public ReviewDate() {

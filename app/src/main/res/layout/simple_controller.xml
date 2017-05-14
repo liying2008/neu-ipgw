@@ -1,65 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/mySimpleController"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/controller_color"
-    android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/mySimpleController"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#d5d7dc" />
+    <LinearLayout
+        android:id="@+id/llScreenLock"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/circle"
+        android:clickable="true"
+        android:gravity="center">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginTop="4dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tvPlayTime"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:gravity="center_vertical"
-            android:text="00:00:00"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:layout_marginLeft="10dp"/>
-
-        <LinearLayout
-            android:id="@+id/llPlayOrPause"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:orientation="horizontal"
-            android:background="@drawable/selector_item_function">
-            <ImageView
-                android:id="@+id/ivPlayOrPause"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_gravity="center"
-                android:background="@mipmap/ic_button_pause" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/llStretchOrOri"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:orientation="horizontal"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/selector_item_function">
         <ImageView
-            android:id="@+id/ivStretchOrOri"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:background="@mipmap/ic_zoom_inside"
-            android:layout_marginRight="10dp"
-            android:layout_gravity="center"/>
-        </LinearLayout>
-    </RelativeLayout>
-</LinearLayout>
+            android:id="@+id/ivLock"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@mipmap/unlock_screen"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/controller_color"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d5d7dc"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvPlayTime"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="00:00:00"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:id="@+id/llPlayOrPause"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_item_function"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivPlayOrPause"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/ic_button_pause"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llStretchOrOri"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_item_function"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivStretchOrOri"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/ic_zoom_inside"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

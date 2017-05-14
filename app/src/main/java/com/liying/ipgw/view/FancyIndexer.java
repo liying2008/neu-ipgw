@@ -27,8 +27,6 @@ import com.liying.ipgw.R;
  * =======================================================
  */
 public class FancyIndexer extends View {
-
-
     public interface OnTouchLetterChangedListener {
         void onTouchLetterChanged(String s);
     }

@@ -1,5 +1,5 @@
 -ignorewarnings                # 抑制警告
--optimizationpasses 5          # 指定代码的压缩级别
+# -optimizationpasses 5          # 指定代码的压缩级别
 -dontusemixedcaseclassnames   # 是否使用大小写混合
 -dontpreverify           # 混淆时是否做预校验
 -verbose                # 混淆时是否记录日志
@@ -53,15 +53,15 @@
 -keep class android.net.http.** { *; }
 -keepattributes *Annotation*
 
-# Fresco
-# Keep our interfaces so they can be used by other ProGuard rules.
-# See http://sourceforge.net/p/proguard/bugs/466/
--keep,allowobfuscation @interface com.facebook.common.internal.DoNotStrip
-# Do not strip any method/class that is annotated with @DoNotStrip
--keep @com.facebook.common.internal.DoNotStrip class *
--keepclassmembers class * {
-    @com.facebook.common.internal.DoNotStrip *;
+# Glide
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
 }
+
+# for DexGuard only
+# -keepresourcexmlelements manifest/application/meta-data@value=GlideModule
 # Keep native methods
 -keepclassmembers class * {
     native <methods>;

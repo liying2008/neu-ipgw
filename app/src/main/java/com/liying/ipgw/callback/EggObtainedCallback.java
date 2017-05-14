@@ -10,8 +10,6 @@ package com.liying.ipgw.callback;
  * =======================================================
  */
 public interface EggObtainedCallback {
-    /**
-     * 显示“彩蛋收纳盒”条目
-     */
+    /** 显示“彩蛋收纳盒”条目 */
     void ShowEggsBox();
 }

@@ -18,6 +18,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        tools:overrideLibrary="com.github.chrisbanes.photoview"
         tools:replace="android:allowBackup">
 
         <!-- 主界面 -->
@@ -67,7 +68,7 @@
         <!-- 彩蛋收纳盒界面 -->
         <activity android:name=".activity.EggActivity"/>
         <!--彩蛋大图界面-->
-        <activity android:name=".activity.EggPicActivity" />
+        <activity android:name=".activity.EggPicActivity"/>
         <!-- HDTV节目列表界面 -->
         <activity
             android:name=".activity.NeuHdtvListActivity"
@@ -87,6 +88,7 @@
         <receiver android:name=".widget.IpgwWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.liying.ipgw.appwidget.ACTION_IPGW"/>
             </intent-filter>
             <!-- 配置AppWidget所需的数据 -->
             <meta-data
@@ -94,15 +96,24 @@
                 android:resource="@xml/ipgw_widget"/>
         </receiver>
 
-        <service android:name=".widget.IpgwService"/>
+        <service android:name=".widget.IpgwService">
+            <intent-filter>
+                <action android:name="com.liying.ipgw.appwidget.ACTION_IPGW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
 
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="你的UMENG_APPKEY"/>
+            android:value="564ddc6fe0f55a0b3b003304"/>
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="${UMENG_CHANNEL_VALUE}"/>
 
+        <meta-data
+            android:name="com.liying.ipgw.utils.MyGlideMoudle"
+            android:value="GlideModule"/>
     </application>
 
 </manifest>

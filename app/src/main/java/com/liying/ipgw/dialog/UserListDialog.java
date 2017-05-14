@@ -35,9 +35,7 @@ public class UserListDialog extends Dialog {
     private ListView lvUsers;
     private TextView tvAccountNone;
     private UserListAdapter adapter;
-    /**
-     * 用户列表
-     */
+    /** 用户列表 */
     private List<AccountInfo> users;
     private OnAccountChange callback;
     private static WeakReference<UserListDialog> dialog;

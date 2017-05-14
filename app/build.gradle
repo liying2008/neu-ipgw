@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '25.0.0'
+    buildToolsVersion '25.0.2'
     defaultConfig {
         applicationId "com.liying.ipgw"
-        minSdkVersion 11
+        minSdkVersion 14
         targetSdkVersion 23
-        versionCode 26
-        versionName "4.3.2"
+        versionCode 29
+        versionName "4.3.5"
         vectorDrawables.useSupportLibrary = true    // 增加对Vector兼容性的支持
 //        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "fir"]
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -36,7 +36,7 @@ android {
                         output ->
                             def outFile = output.outputFile
                             if (outFile != null && outFile.name.endsWith(".apk")) {
-                                def fileName = "ipgw_4.3.2_${variant.productFlavors[0].name.replaceAll("_", "")}.apk"
+                                def fileName = "ipgw_4.3.5_${variant.productFlavors[0].name.replaceAll("_", "")}.apk"
                                 output.outputFile = new File(outFile.parent, fileName)
                             }
                     }
@@ -86,7 +86,8 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.0.1'
     compile 'com.shizhefei:ViewPagerIndicator:1.1.5'
     compile 'cc.duduhuo.applicationtoast:applicationtoast:0.3'
-    compile 'com.facebook.fresco:fresco:0.12.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
     compile 'com.yanzhenjie.nohttp:nohttp:1.1.1'
     compile 'org.sufficientlysecure:html-textview:3.3'
     compile 'com.umeng.analytics:analytics:latest.integration'

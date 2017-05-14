@@ -47,9 +47,7 @@ public class HdtvReviewActivity extends BaseActivity implements OnResponseListen
     private String p;   // 回看频道
     private static final int REQUEST_WHAT = 0x0001;
 
-    /**
-     * 请求队列
-     */
+    /** 请求队列 */
     private RequestQueue requestQueue;
 
     @Override

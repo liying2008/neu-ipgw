@@ -43,9 +43,7 @@ public class ColorThemeActivity extends BaseActivity {
             R.style.YZS_Theme, R.style.LL_Theme, R.style.SF_Theme, R.style.SZ_Theme,
             R.style.KC_Theme, R.style.LMZC_Theme, R.style.QQC_Theme, R.style.JYZ_Theme
     };
-    /**
-     * 主题选择的顺序字符串
-     */
+    /** 主题选择的顺序字符串 */
     private static String themeSelectStr = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {

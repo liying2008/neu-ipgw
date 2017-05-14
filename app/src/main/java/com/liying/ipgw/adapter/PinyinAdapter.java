@@ -14,7 +14,6 @@ import java.util.List;
 
 
 public abstract class PinyinAdapter<T> extends BaseExpandableListAdapter {
-
     private Context context;
     private ExpandableListView listView;
     private int layoutChildId;

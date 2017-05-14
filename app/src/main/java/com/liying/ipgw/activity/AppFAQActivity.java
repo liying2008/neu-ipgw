@@ -38,13 +38,9 @@ public class AppFAQActivity extends BaseActivity implements SwipeRefreshLayout.O
     private SwipeRefreshLayout swipeRefreshLayout;
     private static final int REQUEST_WHAT = 0x0001;
     private static final String REQUEST_URL = "http://duduhuo.cc/ddh/ipgw/FAQ.json";
-    /**
-     * 黑板报列表
-     */
+    /** 黑板报列表 */
     private List<RecentPost> faqList;
-    /**
-     * 请求队列
-     */
+    /** 请求队列 */
     private RequestQueue requestQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

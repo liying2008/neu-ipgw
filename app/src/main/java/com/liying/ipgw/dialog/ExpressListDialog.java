@@ -34,9 +34,7 @@ public class ExpressListDialog extends Dialog {
     private ListView lvExpress;
     private TextView tvExpressNone;
     private ExpressListAdapter adapter;
-    /**
-     * 快递单信息列表
-     */
+    /** 快递单信息列表 */
     private List<Express> expresses;
     private OnExpressChange callback;
     private static WeakReference<ExpressListDialog> dialog;

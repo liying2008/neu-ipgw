@@ -10,8 +10,11 @@ package com.liying.ipgw.model;
  * =======================================================
  */
 public class ReviewProgram {
+    /** 回看节目名称 */
     private String name;
+    /** 节目开始时间 */
     private String timeStart;
+    /** 节目结束时间 */
     private String timeEnd;
 
     /** 空参构造器 */

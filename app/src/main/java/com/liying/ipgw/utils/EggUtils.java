@@ -34,7 +34,7 @@ public class EggUtils {
             case 6:
                 return new Egg(6, R.drawable.egg06_got, "感觉最近泡在网上的日子越来越多了呢~");
             case 7:
-                return new Egg(7, R.drawable.egg07_got, "要么屏幕太小，要么视力不好。");
+                return new Egg(7, R.drawable.egg07_got, "一劳永逸，有备无患。");
             case 8:
                 return new Egg(8, R.drawable.egg08_got, "流量黑洞！五个帐户已经不够我用的了！");
             case 9:

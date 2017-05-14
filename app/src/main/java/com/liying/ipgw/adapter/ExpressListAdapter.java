@@ -26,9 +26,7 @@ import java.util.List;
 public class ExpressListAdapter extends BaseAdapter {
 
     private LayoutInflater inflater;
-    /**
-     * 快递单列表数组
-     */
+    /** 快递单列表数组 */
     private List<Express> expresses;
 
     public ExpressListAdapter(Context context, List<Express> expresses) {

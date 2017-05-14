@@ -18,6 +18,7 @@ import com.liying.ipgw.application.AccountApp;
 import com.liying.ipgw.model.RecentPost;
 import com.liying.ipgw.utils.DensityUtil;
 
+import org.sufficientlysecure.htmltextview.HtmlHttpImageGetter;
 import org.sufficientlysecure.htmltextview.HtmlTextView;
 
 import java.util.ArrayList;
@@ -89,29 +90,29 @@ public class RecentPostsAdapter extends BaseAdapter {
         if (getItemViewType(position) == TYPE_TOP) {
             // 让第一行距顶部有一定的距离
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT);
+                LinearLayout.LayoutParams.WRAP_CONTENT);
             lp.setMargins(DensityUtil.dip2px(context, 16),
-                    DensityUtil.dip2px(context, 10), DensityUtil.dip2px(context, 16), 0);
+                DensityUtil.dip2px(context, 10), DensityUtil.dip2px(context, 16), 0);
             holder.llItem.setLayoutParams(lp);
         } else if (getItemViewType(position) == TYPE_BOTTOM) {
             // 让最后一行距底部有一定的距离
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT);
+                LinearLayout.LayoutParams.WRAP_CONTENT);
             lp.setMargins(DensityUtil.dip2px(context, 16),
-                    0, DensityUtil.dip2px(context, 16), DensityUtil.dip2px(context, 10));
+                0, DensityUtil.dip2px(context, 16), DensityUtil.dip2px(context, 10));
             holder.llItem.setLayoutParams(lp);
         } else {
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT);
+                LinearLayout.LayoutParams.WRAP_CONTENT);
             lp.setMargins(DensityUtil.dip2px(context, 16),
-                    0, DensityUtil.dip2px(context, 16), 0);
+                0, DensityUtil.dip2px(context, 16), 0);
             holder.llItem.setLayoutParams(lp);
         }
 
         holder.tvTitle.setText(post.getTitle());
         String dateMsg = "发布时间：" + post.getDate();
         holder.tvDate.setText(dateMsg);
-        holder.tvContent.setHtml(post.getContent());
+        holder.tvContent.setHtml(post.getContent(), new HtmlHttpImageGetter(holder.tvContent, null, true));
         holder.llItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -27,9 +27,7 @@ public class AboutActivity extends BaseActivity implements View.OnClickListener 
     private ImageView ivIcon;
     private FrameLayout flFeedback, flShareIPGW, flDeclare, flRecommend, flAboutAuthor;
 
-    /**
-     * 作者邮箱地址
-     */
+    /** 作者邮箱地址 */
     private static final String EMAIL = "liruoer2008@yeah.net";
 
     @Override
@@ -64,7 +62,7 @@ public class AboutActivity extends BaseActivity implements View.OnClickListener 
     }
 
     private void initData() {
-        String version = "v" + AccountApp.versionName;
+        String version = "v" + AccountApp.getInstance().getVersionName();
         tvVersion.setText(version);
     }
 
@@ -84,7 +82,7 @@ public class AboutActivity extends BaseActivity implements View.OnClickListener 
                 String resolution = "Resolution: " + display.getWidth() + "x" + display.getHeight() + "; ";
                 String msgPreset = resolution + "\nAndroid: " + android.os.Build.VERSION.RELEASE
                         + "; \nPhone: " + android.os.Build.MODEL
-                        + "; \nVersion: " + AccountApp.versionName
+                        + "; \nVersion: " + AccountApp.getInstance().getVersionName()
                         + "; \n（以上数据由应用自动收集，发送邮件时请保留）。";
                 Intent mailIntent = new Intent(Intent.ACTION_SENDTO);
                 mailIntent.setData(Uri.parse("mailto:" + EMAIL));

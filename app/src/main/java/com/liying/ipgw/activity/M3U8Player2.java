@@ -2,6 +2,8 @@ package com.liying.ipgw.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -41,7 +43,7 @@ import cc.duduhuo.applicationtoast.AppToast;
  * =======================================================
  */
 public class M3U8Player2 extends BaseActivity implements MediaPlayer.OnCompletionListener, MediaPlayer.OnErrorListener, MediaPlayer.OnInfoListener,
-        MediaPlayer.OnPreparedListener, MediaPlayer.OnSeekCompleteListener, MediaPlayer.OnVideoSizeChangedListener, SurfaceHolder.Callback, MediaPlayer.OnBufferingUpdateListener {
+    MediaPlayer.OnPreparedListener, MediaPlayer.OnSeekCompleteListener, MediaPlayer.OnVideoSizeChangedListener, SurfaceHolder.Callback, MediaPlayer.OnBufferingUpdateListener {
     private Display currDisplay;
     private SurfaceView surfaceView;
     private SurfaceHolder holder;
@@ -57,23 +59,21 @@ public class M3U8Player2 extends BaseActivity implements MediaPlayer.OnCompletio
     private TextView tvPlayTime;
     private LinearLayout llPlayOrPause;
     private LinearLayout llStretchOrOri;
+    private LinearLayout llScreenLock;
+    private ImageView ivLock;
     private ImageView ivPlayOrPause;
     private ImageView ivStretchOrOri;
-    private LinearLayout mySimpleController;
+    private RelativeLayout mySimpleController;
     private boolean isFullScreen = true;    // 是否是全屏播放
     private boolean isPaused = false;       // 是否处于暂停状态
-    /**
-     * 最大声音
-     */
+    /** 最大声音 */
     private int mMaxVolume;
-    /**
-     * 当前声音
-     */
+    /** 当前声音 */
     private int mVolume = -1;
-    /**
-     * 当前亮度
-     */
+    /** 当前亮度 */
     private float mBrightness = -1f;
+    /** 是否锁定屏幕 */
+    private boolean mScreenLocked = false;
     private GestureDetector mGestureDetector;
 
     public void onCreate(Bundle savedInstanceState) {
@@ -113,7 +113,9 @@ public class M3U8Player2 extends BaseActivity implements MediaPlayer.OnCompletio
         llStretchOrOri = (LinearLayout) findViewById(R.id.llStretchOrOri);
         ivPlayOrPause = (ImageView) findViewById(R.id.ivPlayOrPause);
         ivStretchOrOri = (ImageView) findViewById(R.id.ivStretchOrOri);
-        mySimpleController = (LinearLayout) findViewById(R.id.mySimpleController);
+        mySimpleController = (RelativeLayout) findViewById(R.id.mySimpleController);
+        llScreenLock = (LinearLayout) findViewById(R.id.llScreenLock);
+        ivLock = (ImageView) findViewById(R.id.ivLock);
     }
 
     private final static int HIDE_CONTROLLER = 1;
@@ -160,7 +162,6 @@ public class M3U8Player2 extends BaseActivity implements MediaPlayer.OnCompletio
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         mMaxVolume = mAudioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
 
-//        System.out.println("path = " + path);
         mGestureDetector = new GestureDetector(this, new MyGestureListener());
         // 设置播放URL
         try {
@@ -216,6 +217,42 @@ public class M3U8Player2 extends BaseActivity implements MediaPlayer.OnCompletio
                 }
             }
         });
+        llScreenLock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 锁定/解锁屏幕
+                if (mScreenLocked) {
+                    lockScreen(false);
+                    ivLock.setBackgroundResource(R.mipmap.unlock_screen);
+                    mScreenLocked = false;
+                } else {
+                    lockScreen(true);
+                    ivLock.setBackgroundResource(R.mipmap.lock_screen);
+                    mScreenLocked = true;
+                }
+            }
+        });
+    }
+
+    /**
+     * 锁定/解锁屏幕方向
+     *
+     * @param lockScreen
+     */
+    public void lockScreen(boolean lockScreen) {
+        if (lockScreen) {
+            Configuration config = getResources().getConfiguration();
+            if (config.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+                AppToast.showToast("横屏已锁定");
+            } else {
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+                AppToast.showToast("竖屏已锁定");
+            }
+        } else {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+            AppToast.showToast("屏幕锁定已解除");
+        }
     }
 
     private void hideController() {
@@ -292,7 +329,9 @@ public class M3U8Player2 extends BaseActivity implements MediaPlayer.OnCompletio
         mySimpleController.setVisibility(View.GONE);
         // 开始播放计时
         myHandler.sendEmptyMessage(CHANGE_TIME_MSG);
-        //然后开始播放视频
+        // 强行开启屏幕旋转效果
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+        // 开始播放视频
         player.start();
     }
 

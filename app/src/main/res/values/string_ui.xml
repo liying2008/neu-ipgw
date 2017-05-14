@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">东大IPGW</string>
-    <string name="copyright">Copyright 2015&#8211;%s LiYing All Rights Reserved</string>
-    <string name="about_update_date">— 更新日期：2017-3-16 —</string>
+    <string name="copyright">Copyright 2015&#8211;2017 LiYing All Rights Reserved</string>
+    <string name="about_update_date">— 更新日期：2017-5-14 —</string>
     <string name="set_default_account">设置默认帐户</string>
     <string name="xdplayer_lite">XDPlayer简版</string>
     <string name="please_input_username">请输入校园网帐号</string>

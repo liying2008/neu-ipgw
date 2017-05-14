@@ -5,7 +5,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.liying.ipgw.R;
@@ -14,8 +13,6 @@ import com.liying.ipgw.task.SplashLoadDataTask;
 import com.liying.ipgw.utils.Constants;
 import com.umeng.analytics.MobclickAgent;
 
-import java.util.Calendar;
-
 import cc.duduhuo.applicationtoast.AppToast;
 
 /**
@@ -23,19 +20,16 @@ import cc.duduhuo.applicationtoast.AppToast;
  */
 public class SplashActivity extends BaseActivity implements SplashLoadDataTask.LoadDataCallback {
     private static PackageInfo packageInfo = null;
-    private TextView tvCopyright;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        tvCopyright = (TextView) findViewById(R.id.tvCopyright);
 
         /** 设置是否对日志信息进行加密, 默认false(不加密). */
         MobclickAgent.enableEncrypt(true);
         try {
-            packageInfo = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
-            AccountApp.versionName = packageInfo.versionName;
+            packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -47,7 +41,7 @@ public class SplashActivity extends BaseActivity implements SplashLoadDataTask.L
      * 启动加载应用数据任务类
      */
     private void startTask() {
-        SplashLoadDataTask task = new SplashLoadDataTask(packageInfo, this);
+        SplashLoadDataTask task = new SplashLoadDataTask(this);
         task.execute();
     }
 
@@ -71,12 +65,6 @@ public class SplashActivity extends BaseActivity implements SplashLoadDataTask.L
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        tvCopyright.setText(getString(R.string.copyright, Calendar.getInstance().get(Calendar.YEAR) + ""));
-    }
-
-    @Override
     public void loaded() {
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -87,8 +75,8 @@ public class SplashActivity extends BaseActivity implements SplashLoadDataTask.L
     }
 
     @Override
-    public void signatureError() {
-        AppToast.showToast("该应用程序已被篡改，为了保证安全性，请到应用商店重新下载。", Toast.LENGTH_LONG);
+    public void error() {
+        AppToast.showToast("应用启动过程中出现错误，请重新启动。", Toast.LENGTH_LONG);
         finish();
     }
 

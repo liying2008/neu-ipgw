@@ -35,9 +35,7 @@ public class NeuHdtvListAdapter extends BaseAdapter {
     private static final int TYPE_TOP = 0x0000;
     private static final int TYPE_MIDDLE = 0x0001;
     private static final int TYPE_BOTTOM = 0x0002;
-    /**
-     * 节目列表集合
-     */
+    /** 节目列表集合 */
     private List<Program> programsList = new ArrayList<>(190);
     private Context context;
     private LayoutInflater inflater;

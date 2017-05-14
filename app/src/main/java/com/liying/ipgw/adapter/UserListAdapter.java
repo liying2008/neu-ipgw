@@ -25,9 +25,7 @@ import java.util.List;
  */
 public class UserListAdapter extends BaseAdapter {
     private LayoutInflater listContainer;
-    /**
-     * 用户列表数组
-     */
+    /** 用户列表数组 */
     private List<AccountInfo> users;
 
     public UserListAdapter(Context context, List<AccountInfo> users) {

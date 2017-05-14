@@ -22,9 +22,7 @@ import java.util.Enumeration;
  * =======================================================
  */
 public class NetWorkUtils {
-    /**
-     * 网络类型 - 无连接
-     */
+    /** 网络类型 - 无连接 */
     private static final int NETWORK_TYPE_NO_CONNECTION = -1231545315;
 
     private static final String NETWORK_TYPE_WIFI = "wifi";
